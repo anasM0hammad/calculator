@@ -328,6 +328,7 @@
 
            $(page).find('#cancel').on('click' , function(){
             val = "" ;
+            count = 0 ;
              $('#text').html(function(idx, oldHtml){
                 return val ;
             });
@@ -350,6 +351,7 @@
             else{  
               let ans = eval(val).toPrecision(4) ;
               val = "" ;
+              count = 0 ;
                $('#text').html(function(idx, oldHtml){
                   return "ANS : " + ans ;
               });
@@ -360,7 +362,7 @@
           $(page).find('#del').on('click' , function(){
 
             let newVal = val ;
-            if(count !== 0){
+            if(count > 0){
               newVal = val.slice(0, count-1) ;
               val = newVal
               count-- ;
