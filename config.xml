@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.myapp.mobile" version="2.25" xmlns="http://www.w3.org/ns/widgets">
-  <name>Calculator</name>
+  <name>My Calculator</name>
   <description>Simple Calculator</description>
   <author email="anas.1633.m@gmail.com" href="http://https://github.com/anasM0hammad/NoteBook">Mohammad Anas</author>
   <preference name="phonegap-version" value="cli-6.5.0" />
