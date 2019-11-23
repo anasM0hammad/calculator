@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head> <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+    
+    <style>
+     
+      body{
+        font-family: verdana;
+      }
+
+      .home_page{
+          background-image: url('background2.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+
+      .home_page img{
+        margin: auto;
+        display: block;
+        margin-top: 30px;
+      }
+
+      .home_page h1{
+        color: #3E3E3F;
+        text-align: center;
+        font-family: verdana;
+        /* text-decoration: underline; */
+      }
+
+      .home_section{
+        padding: 0;
+        margin-top: 80px;
+        text-align: center;
+      }
+
+      .button_section{
+         padding: 0;
+        text-align: center;
+      }
+      
+      .write .col-3{
+        border : solid black 1px ;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .write .col-3:hover {
+        background-color: #F2F2F2;
+      }
+
+       .write .col-9{
+        border : solid black 1px ;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .write .col-9:hover {
+        background-color: #F2F2F2;
+      }
+
+       .about_page{
+          background-image: url('background1.jpg');
+          background-size: cover;
+          background-position: top;
+          background-repeat: no-repeat;
+      }
+
+      .about_page img{
+        margin: auto;
+        display: block;
+        margin-top: 30px;
+      }
+
+     .about_page-section{
+       background-color: transparent;
+     }
+
+    </style>
+
+
+  </head>
+
+  <body>
+
+    <!-- ### LANDING PAGE  ### -->
+    <div class="app-page" data-page="home">
+      <div class="app-content home_page">
+
+        <img src="logo.png" width="100" height="100" id="logo"><br>
+        <h1 ><b><i>CALCULATOR</i></b></h1>
+
+        <div class="app-section home_section">
+          <div class="app-button teal" id="calculating"><b>Start Calculating</b></div>
+        </div>
+
+        <div class="app-section button_section">
+          <div class="app-button red" id="about"><b>About</b></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ### MAIN PAGE ###-->
+    <div class="app-page" data-page="main">
+      <div class="app-topbar teal">
+        <div class="app-button left" data-back></div>
+        <div class="app-title">Simple Calculator</div>
+      </div>
+      <div class="app-content">
+        
+        <div class="app-section display" style="height: 30vh">
+          <h1 id="text"></h1>
+        </div>
+
+        <div class="app-section write">
+          <div class="row">
+            <div class="col-3 key" id="one"><h1>1</h1></div>
+            <div class="col-3 key" id="two"><h1>2</h1></div>           
+            <div class="col-3 key" id="three"><h1>3</h1></div>
+            <div class="col-3 key" id="add"><h1>+</h1></div>
+          </div>
+          <div class="row">
+            <div class="col-3 key" id="four"><h1>4</h1></div>
+            <div class="col-3 key" id="five"><h1>5</h1></div>
+            <div class="col-3 key" id="six"><h1>6</h1></div>
+
+            <div class="col-3 key" id="sub"><h1>-</h1></div>
+          </div>
+          <div class="row">
+            <div class="col-3 key" id="seven"><h1>7</h1></div>
+            <div class="col-3 key" id="eight"><h1>8</h1></div>
+            <div class="col-3 key" id="nine"><h1>9</h1></div>
+            <div class="col-3 key" id="mult"><h1>*</h1></div>
+          </div>
+          <div class="row">
+            <div class="col-3 key" id="point"><h1>.</h1></div>
+            <div class="col-3 key" id="zero"><h1>0</h1></div>
+            <div class="col-3 key pt-2" id="del"><h3>Del</h3></div>
+            <div class="col-3 key" id="div"><h1>/</h1></div>
+          </div>
+          <div class="row">
+            <div class="col-9 key" id="equal"><h1>=</h1></div>
+            <div class="col-3 key pt-2" id="cancel"><h3>AC</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- #### ABOUT PAGE #### -->
+    <div class="app-page" data-page="about">
+      <div class="app-topbar red">
+        <div class="app-button left" data-back></div>
+        <div class="app-title">About</div>
+      </div>
+      <div class="app-content about_page">
+      <div class="app-section about_page-section">
+        <h4 class="text-center"><b><u>ASSIGNMENT</u></b></h4>
+      </div>
+
+       <div class="app-section about_page-section">
+         <h5 id="design"><b><i>Design By : </i><u>Mohammad Anas</u></b></h5><br>
+         <h5><b><i>Rool No : </i><u>16BCS006</u></b></h5><br>
+         <h5><b><i>Batch : </i><u>2016 - 2020</u></b></h5><br>
+       </div>
+
+       <div class="app-section about_page-section">
+         <h4 class="text-center"><b><u>Mobile Communication</u></b></h4>
+       </div>
+      </div>
+    </div>
+
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+    <script>
+      
+
+      App.controller('home', function (page) {
+        // put stuff here
+
+        $(page).find('#calculating').on('click' , function(){
+            App.load("main") ;
+        });
+
+        $(page).find('#about').on('click', function(){
+            App.load('about') ;
+        });
+
+      });
+
+
+
+      App.controller("main" , function (page) {
+        // put stuff here
+          let val = "" ;
+          let count = 0 ;
+
+          $(page).find('#zero').on('click' , function(){
+            val = val + 0;
+            count++ ;
+            $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+          $(page).find('#one').on('click' , function(){
+            val = val + 1;
+            count++ ;
+            $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+          $(page).find('#two').on('click' , function(){
+            val = val + 2 ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+          $(page).find('#three').on('click' , function(){
+            val = val + 3 ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+          $(page).find('#four').on('click' , function(){
+            val = val + 4  ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+          $(page).find('#five').on('click' , function(){
+            val = val + 5  ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+
+          $(page).find('#six').on('click' , function(){
+            val = val + 6  ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+          $(page).find('#seven').on('click' , function(){
+            val = val + 7  ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+           $(page).find('#eight').on('click' , function(){
+            val = val + 8  ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+           $(page).find('#nine').on('click' , function(){
+            val = val + 9  ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+          
+           $(page).find('#point').on('click' , function(){
+            val = val + "." ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+           $(page).find('#add').on('click' , function(){
+            val = val + "+" ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          });
+
+           $(page).find('#sub').on('click' , function(){
+            val = val + "-" ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+           $(page).find('#mult').on('click' , function(){
+            val = val + "*" ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          }); 
+
+           $(page).find('#div').on('click' , function(){
+            val = val + "/" ;
+            count++ ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          });   
+
+           $(page).find('#cancel').on('click' , function(){
+            val = "" ;
+             $('#text').html(function(idx, oldHtml){
+                return val ;
+            });
+          });  
+
+           $(page).find('#equal').on('click' , function(){
+            
+            if(val[count-1] == '+' || val[count-1] == '-' || val[count-1] == '*' || val[count-1] == '/' || val[count-1] == '.'){
+               App.dialog({
+                  title        : 'WRONG EXPRESSION',
+                  text         : "Expression can't be end with an operator",
+                  okButton     : 'Try Again',
+                  cancelButton : 'Back'
+                }, function (tryAgain) {
+                  if (tryAgain) {
+                     
+                  }
+                });
+            }
+            else{  
+              let ans = eval(val).toPrecision(4) ;
+              val = "" ;
+               $('#text').html(function(idx, oldHtml){
+                  return "ANS : " + ans ;
+              });
+            }
+
+          });  
+
+          $(page).find('#del').on('click' , function(){
+
+            let newVal = val ;
+            if(count !== 0){
+              newVal = val.slice(0, count-1) ;
+              val = newVal
+              count-- ;
+            }
+            $('#text').html(function(idx, oldHtml){
+                return val;
+            });
+          });  
+
+      });
+
+      App.controller("about" , function(page){
+
+        $(page).find("#design").on('click' , () => {
+          console.log('click') ;
+        });
+
+      });
+
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
