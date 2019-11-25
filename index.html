@@ -15,7 +15,7 @@
         font-family: verdana;
       }
 
-      .home_page{
+      /*.home_page{
           background-image: url('background2.jpg');
           background-size: cover;
           background-position: center;
@@ -26,7 +26,7 @@
         margin: auto;
         display: block;
         margin-top: 30px;
-      }
+      }*/
 
       .home_page h1{
         color: #3E3E3F;
@@ -92,27 +92,35 @@
 
     <!-- ### LANDING PAGE  ### -->
     <div class="app-page" data-page="home">
-      <div class="app-content home_page">
+      <div class="app-content home_page" style="background-color: #aaefed">
 
-        <img src="logo.png" width="100" height="100" id="logo"><br>
+        <!-- <img src="logo.png" width="100" height="100" id="logo"><br> --><br><br>
         <h1 ><b><i>CALCULATOR</i></b></h1>
 
         <div class="app-section home_section">
-          <div class="app-button teal" id="calculating"><b>Start Calculating</b></div>
+          <div class="app-button" id="calculating"><b>Start Calculating</b></div>
         </div>
-
-        <div class="app-section button_section">
+		<br><br><br><br>
+		<div class="app-section">
+			<h2 class="text-center">ASSIGNMENT</h2>
+			<br><br>
+			<h4 class="text-center">Marhaba Azim: 16BCS004</h4>
+			<h4 class="text-center">Asma Ikram: 16BCS003</h4>
+			<br><br>
+			<h4 class="text-center">Mobile Communication</h4>
+		</div>
+       <!--  <div class="app-section button_section">
           <div class="app-button red" id="about"><b>About</b></div>
-        </div>
+        </div> -->
       </div>
     </div>
 
 
     <!-- ### MAIN PAGE ###-->
     <div class="app-page" data-page="main">
-      <div class="app-topbar teal">
+      <div class="app-topbar danger">
         <div class="app-button left" data-back></div>
-        <div class="app-title">Simple Calculator</div>
+        <div class="app-title">Calculator</div>
       </div>
       <div class="app-content">
         
@@ -158,7 +166,7 @@
 
 
     <!-- #### ABOUT PAGE #### -->
-    <div class="app-page" data-page="about">
+    <!-- <div class="app-page" data-page="about">
       <div class="app-topbar red">
         <div class="app-button left" data-back></div>
         <div class="app-title">About</div>
@@ -178,7 +186,7 @@
          <h4 class="text-center"><b><u>Mobile Communication</u></b></h4>
        </div>
       </div>
-    </div>
+    </div> -->
 
     <script src="zepto.js"></script>
     <script src="app.min.js"></script>
@@ -192,9 +200,9 @@
             App.load("main") ;
         });
 
-        $(page).find('#about').on('click', function(){
-            App.load('about') ;
-        });
+        // $(page).find('#about').on('click', function(){
+        //     App.load('about') ;
+        // });
 
       });
 
@@ -374,13 +382,13 @@
 
       });
 
-      App.controller("about" , function(page){
+      // App.controller("about" , function(page){
 
-        $(page).find("#design").on('click' , () => {
-          console.log('click') ;
-        });
+      //   $(page).find("#design").on('click' , () => {
+      //     console.log('click') ;
+      //   });
 
-      });
+      // });
 
 
       try {
